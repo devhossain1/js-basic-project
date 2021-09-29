@@ -1,25 +1,28 @@
-//<span id="temp" class="fa">
 
-const tempLoad = () =>{
- let temp = document.getElementById('temp');
- temp.innerHTML = "&#xf2cb;"; 
+const calculateTemp = () =>{
+    const numberTemp = document.getElementById('temp').value;
+    //console.log(numberTemp);
+    const tempSelected = document.getElementById('temp_diff');
+    const valueTemp = temp_diff.options[tempSelected.selectedIndex].value;
 
- setTimeout(() =>{
-     temp.innerHTML = "&#xf2ca;";
-     temp.style.color = "yellow";
- },1000);
- setTimeout(() =>{
-    temp.innerHTML = "&#xf2c9;";
-},2000);
-setTimeout(() =>{
-    temp.innerHTML = "&#xf2c8;";
-},3000);
-setTimeout(() =>{
-    temp.innerHTML = "&#xf2c7;";
-    temp.style.color = "red";
-},4000);
+    const celToFah=(cel) =>{
+        let fahrenheit = Math.round((cel * 9/5) + 32);
+        return fahrenheit ;
+    }
+    const fahToCel = (fah) =>{
+        let celcius = Math.round((fah - 32) * 5/9);
+        return celcius ;
+    }
+
+    let result;
+    if(valueTemp == 'cel'){
+        result = celToFah(numberTemp);
+        document.getElementById('resultContainer').innerHTML = `= ${result} fahrenheit`;
+
+    }else{
+        result = fahToCel(numberTemp);
+        document.getElementById('resultContainer').innerHTML = `= ${result} celcius`;
+
+    }
 
 }
-
-tempLoad();
-setInterval(tempLoad,5000);

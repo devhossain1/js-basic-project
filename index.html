@@ -10,11 +10,18 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="outerDiv">
-        <div class="innerDiv">
-            <h1 class="heading">I am thermometer <span id="temp" class="fa"></span></h1>
-        </div>
-    </div>
+    <form id="tempCalc" onsubmit="calculateTemp(); return false">
+        <label for="temp">please enter the temperature you would like to convert</label>
+        <br/>
+        <input type="number" name="temp" id="temp">
+        <select name="temp_diff" id="temp_diff">
+            <option value="cel"> celcius</option>
+            <option value="fah"> fahrenheit</option>
+        </select> <br/>
+        <input type="submit" name="temp"> <br>
+        <span id ="resultContainer"> </span>
+
+    </form>
     <script src="script.js"></script>
 </body>
 </html>

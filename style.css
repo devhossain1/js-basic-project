@@ -6,22 +6,42 @@
     box-sizing: border-box;
     font-family: "mulish", sans-serif;
 }
-.outerDiv{
-    width:100vw;
+body{
+    width: 100vw;
     height: 100vh;
-    background:darkslateblue;
+    background-color: slateblue;
     display: grid;
     place-items: center;
 }
-.innerDiv{
-    width:80vw;
-    height: 70vh;
-    display: grid;
-    place-items:center;
+form{
+    background-color: thistle;
+    width: 50%;
+    padding:80px;
+    margin: 100px auto;
+    text-align: center;
+    
 }
-.heading{
-    padding: 20px;
-    font-size: 150px;
-    color: cornsilk;
-    text-shadow: 0 1px 8px rgba(red, green, blue, .5);
+#tempCalc label{
+    font-size: 30px;
 }
+
+#temp{
+font-size: 20px;
+padding:10px;
+margin-top: 20px;
+width: 150px;
+height:40px;
+
+}
+#temp_diff{
+    margin-top:20px;
+    font-size:20px;
+    height:40px;
+}
+[type="submit"]{
+   font-size: 20px;
+   margin: 20px;
+   padding:10px;
+}
+
+
