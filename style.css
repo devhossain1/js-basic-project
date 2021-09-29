@@ -1,13 +1,27 @@
-.main{
-    background-color: blueviolet;
-    text-align: center;
+
+
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: "mulish", sans-serif;
 }
-img{
-    width: 200px;;
+.outerDiv{
+    width:100vw;
+    height: 100vh;
+    background:darkslateblue;
+    display: grid;
+    place-items: center;
 }
-button{
-    display: inline-block;
-    padding:10px;
-    background-color: chartreuse;
-    color: black;
+.innerDiv{
+    width:80vw;
+    height: 70vh;
+    display: grid;
+    place-items:center;
+}
+.heading{
+    padding: 20px;
+    font-size: 150px;
+    color: cornsilk;
+    text-shadow: 0 1px 8px rgba(red, green, blue, .5);
 }
